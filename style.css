@@ -127,6 +127,7 @@ h3 { font-size: 1.75rem; font-weight: 800; line-height: 1; }
 .times dd { display: flex; gap: 7px; flex-wrap: wrap; }
 .times time { min-width: 52px; padding: 4px 7px; border: 1px solid #2a4354; background: #101e27; color: #e8f8ff; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
 .schedule-weekend .times > div { grid-template-columns: minmax(80px, 1fr) 2fr; }
+.schedule-contact { margin-top: 22px; }
 .training { background: #0d1419; border-block: 1px solid #1d2c36; }
 .gallery-intro { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
 .gallery-controls { display: flex; gap: 8px; flex: none; }
@@ -159,15 +160,21 @@ h3 { font-size: 1.75rem; font-weight: 800; line-height: 1; }
 .plan a { margin-top: auto; }
 .plan p:not(.plan-price) { margin-bottom: 6px; }
 .location { background: #0d1419; border-block: 1px solid #1d2c36; }
-.location-grid { display: grid; gap: clamp(25px, 6vw, 80px); grid-template-columns: .8fr 1.2fr; align-items: center; }
-address { margin-block: 24px; color: #d7e2e8; font: 500 1.12rem/1.65 var(--body); }
-.map { overflow: hidden; border: 1px solid #344c5a; background: #15222c; }
+.location-grid { display: grid; gap: 18px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.unit-card { display: grid; grid-template-rows: 1fr auto; align-items: stretch; overflow: hidden; border: 1px solid var(--line); border-top: 3px solid var(--blue); background: var(--panel); }
+.unit-card-sv { border-top-color: var(--pink); }
+.unit-card-sv .eyebrow { color: var(--pink-light); }
+.unit-card-sv .eyebrow::before { background: var(--pink); }
+.unit-info { display: flex; flex-direction: column; align-items: start; padding: clamp(21px, 3vw, 36px); }
+.unit-info h3 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.unit-info address { margin-block: 15px 23px; color: #d7e2e8; font: 500 1.12rem/1.65 var(--body); }
+.unit-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: auto; }
+.unit-actions .button { min-height: 46px; padding-inline: 14px; }
+.map { overflow: hidden; border-top: 1px solid var(--line); background: #15222c; }
 .map iframe { display: block; width: 100%; height: 330px; border: 0; background: #182931; }
-.map > a { display: block; padding: 9px 15px; color: var(--bright); font-size: .875rem; }
-.map > a:hover { text-decoration: underline; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 22px; padding-block: 30px; color: var(--muted); }
 .footer-inner .brand { color: var(--ink); }
-.footer-links { display: flex; gap: 19px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px 19px; }
 
 .lightbox { max-width: min(930px, 100% - 22px); max-height: 94dvh; padding: 0; border: 1px solid #355062; background: #0a1117; }
 .lightbox::backdrop { background: #020609e8; }
